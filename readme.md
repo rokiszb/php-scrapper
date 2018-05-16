@@ -6,3 +6,4 @@ libraries used:
 
 To scrape data visit scrapper.php file or enter it via command line. Data gets scrapped to jobs.json file.
 To validate jobs file with scrapped jobs data via command line, enter 'php validate.php jobs.json'.
+To view data visit api.php
