@@ -6,6 +6,20 @@ namespace Composer\Autoload;
 
 class ComposerStaticInit12939f881bb37941ec155497258e39cb
 {
+    public static $prefixLengthsPsr4 = array (
+        'J' => 
+        array (
+            'JsonSchema\\' => 11,
+        ),
+    );
+
+    public static $prefixDirsPsr4 = array (
+        'JsonSchema\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/justinrainbow/json-schema/src/JsonSchema',
+        ),
+    );
+
     public static $prefixesPsr0 = array (
         'S' => 
         array (
@@ -19,6 +33,8 @@ class ComposerStaticInit12939f881bb37941ec155497258e39cb
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
+            $loader->prefixLengthsPsr4 = ComposerStaticInit12939f881bb37941ec155497258e39cb::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit12939f881bb37941ec155497258e39cb::$prefixDirsPsr4;
             $loader->prefixesPsr0 = ComposerStaticInit12939f881bb37941ec155497258e39cb::$prefixesPsr0;
 
         }, null, ClassLoader::class);
